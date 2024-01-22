@@ -1,5 +1,5 @@
 resource "aws_security_group" "lb-sg" {
-  name        = "load-balancer-sg"
+  name        = "${var.project_name}-lb-sg"
   description = "Allow HTTP traffic into Load Balancer"
   vpc_id      = aws_vpc.my_vpc.id
 
