@@ -1,5 +1,5 @@
 resource "aws_security_group" "allow-web" {
-  name        = "Allow-web"
+  name        = "${var.project_name}-allow-web"
   description = "Allow HTTP inbound traffic for port 22, 80, and 443"
   vpc_id      = aws_vpc.my_vpc.id
 
@@ -32,7 +32,7 @@ resource "aws_security_group" "allow-web" {
   }
 
   tags = {
-    Name = "allow-web"
+    Name = "${var.project_name}-allow-web"
   }
 
 }
