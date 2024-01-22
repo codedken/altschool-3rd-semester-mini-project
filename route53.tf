@@ -1,9 +1,3 @@
-variable "domain_name" {
-  default     = "prayandcode.com.ng"
-  type        = string
-  description = "My domain name"
-}
-
 resource "aws_route53_zone" "hosted_zone" {
   name = var.domain_name
   tags = {
